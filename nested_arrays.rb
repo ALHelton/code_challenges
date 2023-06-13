@@ -17,5 +17,8 @@ def bracket_crusher(input)
   end
 end
 
-p bracket_crusher([1, 2, 3, [[4], 5], [[[6]]]])
-# p bracket_crusher(["hi", "this is", [[["string"], "that is very"], [[[["nested"]]]]]])
+# p bracket_crusher([1, 2, 3, [[4], 5], [[[6]]]])
+# => [1, 2, 3, 4, 5, 6]
+
+p bracket_crusher(["hi", "this is", [[["string"], "that is very"], [[[["nested"]]]]]])
+# => ["hi", "this", "is", "string", "that", "is", "very", "nested"]
