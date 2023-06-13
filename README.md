@@ -1,4 +1,4 @@
-# ruby_challenges
+# Ruby Challenges
 
 <details close>
 <summary>  Millions of Numbers </summary>
