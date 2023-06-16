@@ -6,16 +6,10 @@
 
 # list all numbers less than the number given
 
-# puts num
-# print_sum = num + recursive_sum(num - 1)
-# puts print_sum
-# print_sum
+def recursive_sum(num):
+  if num == 0:
+    return 0
+  else:
+    return num + recursive_sum(num - 1)
 
-def recursive_sum(num)
-  return 0 if num == 0
-  num + recursive_sum(num - 1)
-end
-
-puts recursive_sum(6)
-
-# 6 + 5 + 4 + 3 + 2 + 1 + 0 = 21
+print(recursive_sum(6))
