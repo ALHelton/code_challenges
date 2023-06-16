@@ -1,4 +1,5 @@
-# Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
+# Given an array nums containing n distinct numbers in the range [0, n], 
+# return the only number in the range that is missing from the array.
 
 # @param {Integer[]} nums
 # @return {Integer}
@@ -9,7 +10,7 @@ def recursion(num)
 end
 
 def missing_number(nums)
-  n = nums.count
+  n = nums.length
   target = recursion(n)
   actual = nums.sum
   target - actual
