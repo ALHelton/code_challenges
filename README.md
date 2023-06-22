@@ -138,3 +138,42 @@ The contents of the array are not significant. Your method/function should take 
 
 -------------------------------------
 </details>
+
+<details close>
+<summary>  Valid Anagram </summary>
+<br>
+
+Instructions
+
+Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+Examples
+
+Example 1:
+
+<pre><code>
+Input: s = "anagram", t = "nagaram"
+Output: true
+</code></pre>
+
+Example 2:
+
+<pre><code>
+Input: s = "rat", t = "car"
+Output: false
+</code></pre>
+
+Constraints:
+
+1 <= s.length, t.length <= 5 * 104
+s and t consist of lowercase English letters.
+ 
+
+Follow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
+
+My answer: By splitting all characters and then tallying each, it encompasses this edge case
+
+-------------------------------------
+</details>
