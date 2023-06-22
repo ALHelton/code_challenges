@@ -1,4 +1,4 @@
-# Ruby Challenges
+# Code Challenges
 
 <details close>
 <summary>  Millions of Numbers </summary>
