@@ -177,3 +177,48 @@ My answer: By splitting all characters and then tallying each, it encompasses th
 
 -------------------------------------
 </details>
+
+<details close>
+<summary>  Valid Palindrome </summary>
+<br>
+
+Instructions
+
+A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+
+Given a string s, return true if it is a palindrome, or false otherwise.
+
+Examples
+
+Example 1:
+
+<pre><code>
+Input: s = "A man, a plan, a canal: Panama"
+Output: true
+Explanation: "amanaplanacanalpanama" is a palindrome.
+</code></pre>
+
+Example 2:
+
+<pre><code>
+Input: s = "race a car"
+Output: false
+Explanation: "raceacar" is not a palindrome.
+</code></pre>
+
+Example 3:
+
+<pre><code>
+Input: s = " "
+Output: true
+Explanation: s is an empty string "" after removing non-alphanumeric characters.
+Since an empty string reads the same forward and backward, it is a palindrome.
+</code></pre>
+
+Constraints:
+
+1 <= s.length <= 2 * 105
+s consists only of printable ASCII characters.
+
+-------------------------------------
+</details>
