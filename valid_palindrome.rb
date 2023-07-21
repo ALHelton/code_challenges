@@ -9,9 +9,10 @@
 # take new array and join all characters back into one string
 # will reverse the modified string
 # will compare the the reversed and non-reversed strings and determine if they are the same
+# can include alphanumeric characters - includes numbers
 
 def is_palindrome(string)
-  alphabet = "abcdefghijklmnopqrstuvwxyz"
+  alphabet = "abcdefghijklmnopqrstuvwxyz0123456789"
   initial_array = string.downcase.split("")
 
   new_string = initial_array.select do |char|
