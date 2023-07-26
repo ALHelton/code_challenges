@@ -282,3 +282,40 @@ nums is sorted in non-decreasing order.
 
 -------------------------------------
 </details>
+
+<details close>
+<summary>  Longest Common Prefix </summary>
+<br>
+
+Instructions
+
+Write a function to find the longest common prefix string amongst an array of strings.
+
+If there is no common prefix, return an empty string "".
+
+
+Examples
+
+Example 1:
+
+<pre><code>
+Input: strs = ["flower","flow","flight"]
+Output: "fl"
+</code></pre>
+
+Example 2:
+
+<pre><code>
+Input: strs = ["dog","racecar","car"]
+Output: ""
+Explanation: There is no common prefix among the input strings.
+</code></pre>
+
+Constraints:
+
+1 <= strs.length <= 200
+0 <= strs[i].length <= 200
+strs[i] consists of only lowercase English letters.
+
+-------------------------------------
+</details>
