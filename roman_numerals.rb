@@ -22,6 +22,7 @@
 #   "I" => "1"
 # }
 
+
 ROMAN_NUMERALS = {
   "1000" => "M",
   "900" => "CM",
@@ -36,61 +37,30 @@ ROMAN_NUMERALS = {
   "5" => "V",
   "4" => "IV",
   "1" => "I"
-  # "" => ""
 }
 
+
 def to_roman(number)
-  num_array = number.to_s.chars
-  array_size = num_array.size
+  roman_numeral = ""
 
   ROMAN_NUMERALS.each do |key, numeral|
-    require 'pry'; binding.pry
+    while number >= key.to_i
+      roman_numeral += numeral
+      number -= key.to_i
+    end
   end
+
+  roman_numeral
 end
 
-# def to_roman(number)
-#   num_array = number.to_s.chars
-#   array_size = num_array.size
-#   thousand_num = ""
-#   hundred_num = ""
-#   ten_num = ""
-#   one_num = ""
+# p to_roman(128)
+# => "CXXVIII"
 
-#   num_array.each_with_index do |num, index|
-#     if array_size == 4
-#       if index == 0
-#         thousand_num = num + "000"
-#       elsif index == 1
-#         hundred_num = num + "00"
-#       elsif index == 2
-#         ten_num = num + "0"
-#       else
-#         one_num = num
-#       end
-#     elsif array_size == 3
-#       if index == 0
-#         hundred_num = num + "00"
-#       elsif index == 1
-#         ten_num = num + "0"
-#       else
-#         one_num = num
-#       end
-#     elsif array_size == 2
-#       if index == 0
-#         ten_num = num + "0"
-#       elsif index == 1
-#         one_num = num
-#       end
-#     elsif array_size == 1
-#       one_num = num
-#     end
-#   end
-
-#   require 'pry'; binding.pry
-#   new_value = ROMAN_NUMERALS[thousand_num] + ROMAN_NUMERALS[hundred_num] + ROMAN_NUMERALS[ten_num] + ROMAN_NUMERALS[one_num]
-# end
-
-p to_roman(128)
 # p to_roman(2000)
+# => "MM"
+
 # p to_roman(2017)
-# p to_roman(1999)
+# => "MMXVII"
+
+p to_roman(1999)
+# => "MCMXCIX"
