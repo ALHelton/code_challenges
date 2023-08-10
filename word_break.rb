@@ -20,16 +20,37 @@
 # compare each match to see if they fit together to equal the whole input string
 
 def word_break(s, word_dict)
-  matches = word_dict.select do |str|
-    str if s.include?(str)
+  match_dir = {}
+
+  word_dict.each do |str|
+    if s.include?(str)
+      match_dir[str] = str.size
+    end
   end
 
+  new_word = []
 
-  require 'pry'; binding.pry
+  match_dir.each do |match|
+    if s.start_with?(match[0]) && new_word.empty?
+      new_word << match[0]
+      if !s.start_with?(new_word.join)
+        new_word.delete(match[0])
+      end
+    elsif !new_word.empty?
+      if (new_word.join.length - match[1] >= 0)
+        new_word << match[0]
+        if !s.start_with?(new_word.join)
+          new_word.delete(match[0])
+        end
+      end
+    end
+  end
+
+  new_word.join == s
 end
 
-# p word_break("leetcode", wordDict = ["leet","code"])
+p word_break("leetcode", wordDict = ["leet","code"])
 p word_break("leetcode", wordDict = ["leet", "tco", "code"])
 
-# p word_break("applepenapple", wordDict = ["apple","pen"])
-# p word_break("catsandog", wordDict = ["cats","dog","sand","and","cat"])
+# p word_break("applepenapple", wordDict = ["apple","pen"]) # NOT WORKING
+p word_break("catsandog", wordDict = ["cats","dog","sand","and","cat"])
