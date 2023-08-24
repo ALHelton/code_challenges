@@ -18,9 +18,21 @@
 # if int is positive, will be compared to the integer after it
 # if int is negative, will be compared to the integer before it
 
-def asteroid_collection(array)
-  new_array = []
+def asteroid_collection(current_array)
+  collision = true
 
+  until collision == false
+    smaller_array = shrink_array(current_array)
+    if smaller_array.size != current_array.size
+      current_array = smaller_array
+    else
+      return current_array
+    end
+  end
+end
+
+def shrink_array(array)
+  new_array = []
   array.each do |num|
     if new_array.last.nil?
       new_array << num
@@ -39,14 +51,15 @@ def asteroid_collection(array)
       new_array << num
     end
   end
+  new_array
 end
 
 # loop until all elements in array are the same(pos OR neg)? 
 
-# p asteroid_collection([5, 10, -5])
+p asteroid_collection([5, 10, -5])
 # => [5,10]
 
-# p asteroid_collection([8,-8])
+p asteroid_collection([8,-8])
 # => []
 
 p asteroid_collection([10, 2, -5]) #NOT WORKING
