@@ -24,6 +24,7 @@ p merge([1], 1, [], 0)
 # => [1]
 
 p merge([0], 0, [1], 1)
+# => [1]
 
 
 # ------------- SOLUTION ONE -------------
@@ -33,4 +34,3 @@ def merge(nums1, m, nums2, n)
     num if num > 0
   end.sort
 end
-# => [1]
