@@ -754,3 +754,39 @@ Constraints:
 
 -------------------------------------
 </details>
+
+<details close>
+<summary> Longest Palindromic Substring </summary>
+<br>
+
+Instructions
+
+Given a string s, return the longest palindromic substring in s.
+
+
+Examples
+
+Example 1:
+
+<pre><code>
+Input: s = "babad"
+Output: "bab"
+Explanation: "aba" is also a valid answer.
+</code></pre>
+
+Example 2:
+
+<pre><code>
+Input: s = "cbbd"
+Output: "bb"
+</code></pre>
+
+Constraints:
+
+<pre><code>
+1 <= s.length <= 1000
+s consist of only digits and English letters.
+</code></pre>
+
+-------------------------------------
+</details>
