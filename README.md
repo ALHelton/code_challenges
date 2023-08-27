@@ -167,9 +167,10 @@ Output: false
 
 Constraints:
 
+<pre><code>
 1 <= s.length, t.length <= 5 * 104
 s and t consist of lowercase English letters.
- 
+</code></pre>
 
 Follow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
 
@@ -217,8 +218,10 @@ Since an empty string reads the same forward and backward, it is a palindrome.
 
 Constraints:
 
+<pre><code>
 1 <= s.length <= 2 * 105
 s consists only of printable ASCII characters.
+</code></pre>
 
 -------------------------------------
 </details>
@@ -276,9 +279,11 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 Constraints:
 
+<pre><code>
 1 <= nums.length <= 3 * 104
 -100 <= nums[i] <= 100
 nums is sorted in non-decreasing order.
+</code></pre>
 
 -------------------------------------
 </details>
@@ -313,9 +318,11 @@ Explanation: There is no common prefix among the input strings.
 
 Constraints:
 
+<pre><code>
 1 <= strs.length <= 200
 0 <= strs[i].length <= 200
 strs[i] consists of only lowercase English letters.
+</code></pre>
 
 -------------------------------------
 </details>
@@ -396,7 +403,9 @@ Output: 21
 
 Constraints:
 
+<pre><code>
 -2^31 <= x <= 2^31 - 1
+</code></pre>
 
 -------------------------------------
 </details>
@@ -440,11 +449,13 @@ Output: false
 
 Constraints:
 
+<pre><code>
 1 <= s.length <= 300
 1 <= wordDict.length <= 1000
 1 <= wordDict[i].length <= 20
 s and wordDict[i] consist of only lowercase English letters.
 All the strings of wordDict are unique.
+</code></pre>
 
 -------------------------------------
 </details>
@@ -490,9 +501,11 @@ Explanation: The 2 and -5 collide resulting in -5. The 10 and -5 collide resulti
 
 Constraints:
 
+<pre><code>
 2 <= asteroids.length <= 104
 -1000 <= asteroids[i] <= 1000
 asteroids[i] != 0
+</code></pre>
 
 -------------------------------------
 </details>
@@ -554,9 +567,11 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 Constraints:
 
+<pre><code>
 0 <= nums.length <= 100
 0 <= nums[i] <= 50
 0 <= val <= 100
+</code></pre>
 
 -------------------------------------
 </details>
@@ -594,11 +609,13 @@ To take course 1 you should have finished course 0, and to take course 0 you sho
 
 Constraints:
 
+<pre><code>
 1 <= numCourses <= 2000
 0 <= prerequisites.length <= 5000
 prerequisites[i].length == 2
 0 <= ai, bi < numCourses
 All the pairs prerequisites[i] are unique.
+</code></pre>
 
 -------------------------------------
 </details>
@@ -636,8 +653,10 @@ Output: true
 
 Constraints:
 
+<pre><code>
 1 <= nums.length <= 105
 -109 <= nums[i] <= 109
+</code></pre>
 
 -------------------------------------
 </details>
@@ -686,11 +705,52 @@ Note that because m = 0, there are no elements in nums1. The 0 is only there to 
 
 Constraints:
 
+<pre><code>
 nums1.length == m + n
 nums2.length == n
 0 <= m, n <= 200
 1 <= m + n <= 200
 -109 <= nums1[i], nums2[j] <= 109
+</code></pre>
+
+-------------------------------------
+</details>
+
+<details close>
+<summary> Kth Largest Element in an Array </summary>
+<br>
+
+Instructions
+
+Given an integer array nums and an integer k, return the kth largest element in the array.
+
+Note that it is the kth largest element in the sorted order, not the kth distinct element.
+
+Can you solve it without sorting?
+
+
+Examples
+
+Example 1:
+
+<pre><code>
+Input: nums = [3,2,1,5,6,4], k = 2
+Output: 5
+</code></pre>
+
+Example 2:
+
+<pre><code>
+Input: nums = [3,2,3,1,2,4,5,5,6], k = 4
+Output: 4
+</code></pre>
+
+Constraints:
+
+<pre><code>
+1 <= k <= nums.length <= 105
+-104 <= nums[i] <= 104
+</code></pre>
 
 -------------------------------------
 </details>
