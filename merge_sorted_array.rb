@@ -11,11 +11,11 @@
 # the output is still nums1, not new array
 
 def merge(nums1, m, nums2, n)
-  new_array = (nums1 << nums2).flatten
-  nums1 = new_array.select do |num|
-    num if num > 0
-  end.sort
+  nums2.each {|num| nums1 << num }
+  nums1.delete(0)
+  nums1.sort
 end
+
 
 p merge([1,2,3,0,0,0], 3, [2,5,6], 3)
 # => [1,2,2,3,5,6]
@@ -25,3 +25,12 @@ p merge([1], 1, [], 0)
 
 p merge([0], 0, [1], 1)
 # => [1]
+
+
+# ------------- SOLUTION ONE -------------
+def merge(nums1, m, nums2, n)
+  new_array = (nums1 << nums2).flatten
+  nums1 = new_array.select do |num|
+    num if num > 0
+  end.sort
+end
