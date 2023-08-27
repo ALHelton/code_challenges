@@ -11,7 +11,9 @@
 # (duplicates count as separate number, not bundled together)
 
 def find_kth_largest(nums, k)
-
+  sorted_nums = nums.sort.reverse
+  k_index = k - 1
+  sorted_nums[k_index]
 end
 
 p find_kth_largest([3,2,1,5,6,4], 2)
