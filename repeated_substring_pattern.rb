@@ -17,10 +17,9 @@
 # else false
 
 def repeated_substring(s)
-  og_string_arr = s.chars
   substring = ""
 
-  og_string_arr.each do |letter|
+  s.chars.each do |letter|
     substring = substring + letter
     if s.length % substring.length == 0 && substring.length > 3
       number_times = s.length / substring.length
