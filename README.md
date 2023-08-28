@@ -905,3 +905,47 @@ Constraints:
 
 -------------------------------------
 </details>
+
+<details close>
+<summary> Repeated Substring Pattern </summary>
+<br>
+
+Instructions
+
+Given a string s, check if it can be constructed by taking a substring of it and appending multiple copies of the substring together.
+
+
+Examples
+
+Example 1:
+
+<pre><code>
+Input: s = "abab"
+Output: true
+Explanation: It is the substring "ab" twice.
+</code></pre>
+
+Example 2:
+
+<pre><code>
+Input: s = "aba"
+Output: false
+</code></pre>
+
+Example 3:
+
+<pre><code>
+Input: s = "abcabcabcabc"
+Output: true
+Explanation: It is the substring "abc" four times or the substring "abcabc" twice.
+</code></pre>
+
+Constraints:
+
+<pre><code>
+1 <= s.length <= 104
+s consists of lowercase English letters.
+</code></pre>
+
+-------------------------------------
+</details>
