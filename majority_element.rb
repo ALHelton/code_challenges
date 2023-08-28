@@ -9,7 +9,14 @@
 
 def majority_element(nums)
   nums_count = nums.tally
-  nums_count.max[0]
+
+  # max_pair = nums_count.max_by do |key, value|
+  #   value
+  # end
+
+  # max_pair[0]
+
+  nums_count.key(nums_count.values.max)
 end
 
 p majority_element([3,2,3])
