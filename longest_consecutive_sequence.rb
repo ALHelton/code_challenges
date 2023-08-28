@@ -16,3 +16,15 @@
 # ex: arr.slice_when{ |prev, current| current != prev + 1 }.to_a
 # max_by to find array with the longest length
 
+def longest_consecutive(nums)
+  sorted = nums.sort
+  grouped = sorted.slice_when { |prev, current| current != prev + 1 }.to_a
+  largest = grouped.max_by { |arr| arr.size }
+  largest.size
+end
+
+p longest_consecutive([100,4,200,1,3,2])
+# => 4
+
+p longest_consecutive([0,3,7,2,5,8,4,6,0,1])
+# => 9
