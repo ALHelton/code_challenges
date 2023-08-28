@@ -21,14 +21,13 @@ def repeated_substring(s)
 
   s.chars.each do |letter|
     substring = substring + letter
-    if s.length % substring.length == 0 && substring.length > 3
+    if s.length % substring.length == 0 && s.length != substring.length
       number_times = s.length / substring.length
       new_string = substring * number_times
       return true if s == new_string
       next
     end
   end
-
   false
 end
 
@@ -40,3 +39,6 @@ p repeated_substring("aba")
 
 p repeated_substring("abcabcabcabc")
 # => true
+
+p repeated_substring("abac")
+# => false
