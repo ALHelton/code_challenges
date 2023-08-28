@@ -39,7 +39,7 @@ def can_place_flowers(flowerbed, n)
         n -= 1
       end
     elsif index == 0
-      if flowerbed[index + 1] == 0 && plot == 0
+      if (flowerbed[index + 1] == 0 && plot == 0) || flowerbed[index + 1].nil?
         plot = 1
         n -= 1
       end
@@ -68,6 +68,9 @@ p can_place_flowers([0,0,1,0,1], 1)
 # => true
 
 p can_place_flowers([1,0,0,0,1,0,0], 2)
+# => true
+
+p can_place_flowers([0], 1)
 # => true
 
 # -------- SOLUTION ONE ---------
