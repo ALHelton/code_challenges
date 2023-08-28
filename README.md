@@ -829,3 +829,41 @@ There are no two adjacent flowers in flowerbed.
 
 -------------------------------------
 </details>
+
+<details close>
+<summary> Majority Element </summary>
+<br>
+
+Instructions
+
+Given an array nums of size n, return the majority element.
+
+The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+
+
+Examples
+
+Example 1:
+
+<pre><code>
+Input: nums = [3,2,3]
+Output: 3
+</code></pre>
+
+Example 2:
+
+<pre><code>
+Input: nums = [2,2,1,1,1,2,2]
+Output: 2
+</code></pre>
+
+Constraints:
+
+<pre><code>
+n == nums.length
+1 <= n <= 5 * 104
+-109 <= nums[i] <= 109
+</code></pre>
+
+-------------------------------------
+</details>
