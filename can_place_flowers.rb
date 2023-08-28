@@ -27,13 +27,10 @@ def can_place_flowers(flowerbed, n)
     if plot == 0 && flowerbed[index - 1] == 0 && flowerbed[index + 1] == 0
       plot = 1
       n -= 1
-    else
-      next
     end
   end
 
-  return true if n == 0
-  false
+  n == 0
 end
 
 p can_place_flowers([1,0,0,0,1], 1)
@@ -41,3 +38,20 @@ p can_place_flowers([1,0,0,0,1], 1)
 
 p can_place_flowers([1,0,0,0,1], 2)
 # => false
+
+
+# -------- SOLUTION ONE ---------
+# 
+# def can_place_flowers(flowerbed, n)
+#   flowerbed.map.with_index do |plot, index|
+#     if plot == 0 && flowerbed[index - 1] == 0 && flowerbed[index + 1] == 0
+#       plot = 1
+#       n -= 1
+#     else
+#       next
+#     end
+#   end
+
+#   return true if n == 0
+#   false
+# end
