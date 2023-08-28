@@ -23,13 +23,15 @@
 # return true if starting number variable = 0
 
 def can_place_flowers(flowerbed, n)
-  flowerbed.map.with_index do |plot, index|
+  flowerbed.map!.with_index do |plot, index|
     if plot == 0 && flowerbed[index - 1] == 0 && flowerbed[index + 1] == 0
       plot = 1
       n -= 1
+    else
+      plot
     end
   end
-
+  
   n == 0
 end
 
@@ -37,6 +39,9 @@ p can_place_flowers([1,0,0,0,1], 1)
 # => true
 
 p can_place_flowers([1,0,0,0,1], 2)
+# => false
+
+p can_place_flowers([1,0,0,0,0,1], 2)
 # => false
 
 
