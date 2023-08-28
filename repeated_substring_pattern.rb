@@ -17,10 +17,8 @@
 # else false
 
 def repeated_substring(s)
-  og_string_size = s.length
   og_string_arr = s.chars
   substring = ""
-  array_last_index = og_string_arr.size - 1
 
   og_string_arr.each do |letter|
     substring = substring + letter
