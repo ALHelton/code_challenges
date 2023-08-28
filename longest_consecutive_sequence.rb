@@ -17,9 +17,10 @@
 # max_by to find array with the longest length
 
 def longest_consecutive(nums)
-  sorted = nums.sort
+  sorted = nums.sort.uniq
   grouped = sorted.slice_when { |prev, current| current != prev + 1 }.to_a
   largest = grouped.max_by { |arr| arr.size }
+  return 0 if nums.empty?
   largest.size
 end
 
@@ -28,3 +29,6 @@ p longest_consecutive([100,4,200,1,3,2])
 
 p longest_consecutive([0,3,7,2,5,8,4,6,0,1])
 # => 9
+
+p longest_consecutive([1,2,0,1])
+# => 3
