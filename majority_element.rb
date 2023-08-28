@@ -8,7 +8,8 @@
 # then need to find the max value, and return the key
 
 def majority_element(nums)
-
+  nums_count = nums.tally
+  nums_count.max[0]
 end
 
 p majority_element([3,2,3])
