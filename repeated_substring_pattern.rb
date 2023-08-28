@@ -22,8 +22,7 @@ def repeated_substring(s)
   s.chars.each do |letter|
     substring = substring + letter
     if s.length % substring.length == 0 && s.length != substring.length
-      number_times = s.length / substring.length
-      new_string = substring * number_times
+      new_string = substring * (s.length / substring.length)
       return true if s == new_string
       next
     end
