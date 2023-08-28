@@ -15,3 +15,31 @@
 # variable string can be divided from original string evently
 # if evenly -> return true
 # else false
+
+def repeated_substring(s)
+  og_string_size = s.length
+  og_string_arr = s.chars
+  substring = ""
+  array_last_index = og_string_arr.size - 1
+
+  og_string_arr.each do |letter|
+    substring = substring + letter
+    if s.length % substring.length == 0 && substring.length > 3
+      number_times = s.length / substring.length
+      new_string = substring * number_times
+      return true if s == new_string
+      next
+    end
+  end
+
+  false
+end
+
+p repeated_substring("abab")
+# => true
+
+p repeated_substring("aba")
+# => false
+
+p repeated_substring("abcabcabcabc")
+# => true
