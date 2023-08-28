@@ -22,16 +22,36 @@
 # if prev num == 1 and num index == input array.size, and starting number variable > 0, return false
 # return true if starting number variable = 0
 
+# when to plot 1:
+# index - 1 == 0 && index + 1 == 0
+# index - 1 == nil && index + 1 == nil
+# index - 1 == nil && index + 1 == 0
+# index - 1 == 0 && index + 1 == nil
+
+# when to skip:
+# index - 1 == 1 OR nil || index + 1 == 1 OR nil
+
 def can_place_flowers(flowerbed, n)
   flowerbed.map!.with_index do |plot, index|
-    if plot == 0 && flowerbed[index - 1] == 0 && flowerbed[index + 1] == 0
-      plot = 1
-      n -= 1
-    else
-      plot
+    if (index > 0 && (index + 1) < flowerbed.size) && plot == 0
+      if flowerbed[index - 1] == 0 && flowerbed[index + 1] == 0
+        plot = 1
+        n -= 1
+      end
+    elsif index == 0
+      if flowerbed[index + 1] == 0 && plot == 0
+        plot = 1
+        n -= 1
+      end
+    elsif index == 1
+      if flowerbed[index - 1] == 0 && plot == 0
+        plot = 1
+        n -= 1
+      end
     end
+    plot
   end
-  
+
   n == 0
 end
 
@@ -44,6 +64,8 @@ p can_place_flowers([1,0,0,0,1], 2)
 p can_place_flowers([1,0,0,0,0,1], 2)
 # => false
 
+p can_place_flowers([0,0,1,0,1], 1)
+# => true
 
 # -------- SOLUTION ONE ---------
 # 
@@ -59,4 +81,20 @@ p can_place_flowers([1,0,0,0,0,1], 2)
 
 #   return true if n == 0
 #   false
+# end
+
+
+# -------- SOLUTION TWO ---------
+# 
+# def can_place_flowers(flowerbed, n)
+#   flowerbed.map!.with_index do |plot, index|
+#     if plot == 0 && flowerbed[index - 1] == 0 && flowerbed[index + 1] == 0
+#       plot = 1
+#       n -= 1
+#     else
+#       plot
+#     end
+#   end
+
+#   n == 0
 # end
