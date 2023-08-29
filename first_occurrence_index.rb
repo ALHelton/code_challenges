@@ -20,5 +20,17 @@
 # if next letter in the first array equals the next letter in the second array,
 # next, don't alter indices variable
 # if it doesn't equal, check the first index position of the second array with
-# the current index of the first array, if they equal reset the variable to equal
-# the current index position
+# the current index of the first array, if they equal replace the variable element
+# with the current index position
+
+def str_str(haystack, needle)
+  index = haystack.index(needle)
+  return -1 if index.nil?
+  index
+end
+
+p str_str("sadbutsad", "sad")
+# => 0
+
+p str_str("leetcode", "leeto")
+# => -1
