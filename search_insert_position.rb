@@ -23,6 +23,7 @@
 def search_insert(array, target)
   return array.index(target) if array.index(target) != nil
   max_below_target = array.reverse.find { |num| num < target }
+  return 0 if max_below_target.nil?
   array.index(max_below_target) + 1
 end
 
@@ -34,3 +35,6 @@ p search_insert([1,3,5,6], 2)
 
 p search_insert([1,3,5,6], 7)
 # => 4
+
+p search_insert([1,3,5,6], 0)
+# => 0
