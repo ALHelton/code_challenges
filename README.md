@@ -1122,7 +1122,7 @@ s consists of parentheses only '()[]{}'.
 </details>
 
 <details close>
-<summary> Search Index Position </summary>
+<summary> Search Insert Position </summary>
 <br>
 
 Instructions
