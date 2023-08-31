@@ -20,3 +20,17 @@
 # Then find the position of that number in the array and return 
 # that index + 1
 
+def search_insert(array, target)
+  return array.index(target) if array.index(target) != nil
+  max_below_target = array.reverse.find { |num| num < target }
+  array.index(max_below_target) + 1
+end
+
+p search_insert([1,3,5,6], 5)
+# => 2
+
+p search_insert([1,3,5,6], 2)
+# => 1
+
+p search_insert([1,3,5,6], 7)
+# => 4
